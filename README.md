@@ -10,7 +10,7 @@
   ```bash
   dotnet add package SeedEasy
   ```
-~~~~
+
 ### Usage
 
 1. Create you seeder by implementing 'ISeeder'
