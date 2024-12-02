@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.Reflection;
+﻿using System.Reflection;
+using Microsoft.EntityFrameworkCore;
 
 namespace SeedEasy;
 
 public static class OptionBuilderExtensions
 {
-    public static DbContextOptionsBuilder AddSeedData(this DbContextOptionsBuilder optionsBuilder , Assembly seedersAssembly)
+    public static DbContextOptionsBuilder AddSeedData(this DbContextOptionsBuilder optionsBuilder,
+        Assembly seedersAssembly)
     {
         var seederTypes = seedersAssembly
             .GetTypes()

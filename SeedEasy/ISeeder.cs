@@ -1,6 +1,6 @@
 ﻿namespace SeedEasy;
 
-public interface ISeeder<TEntity>
+public interface ISeeder<out TEntity>
 {
     public IEnumerable<TEntity> Generate();
 }
