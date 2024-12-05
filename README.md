@@ -12,11 +12,7 @@
   dotnet add package SeedEasy
   ```
 
-### Usage
-
-Got it! Here's a revised version of your documentation with added details and explanations:
-
----
+## Usage
 
 ### 1. Create Your Seeder by Implementing `Seeder<>`
 
@@ -61,7 +57,7 @@ protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
   populated when the application starts.
 - This approach centralizes the seeding logic and allows you to add seed data without manually invoking seed methods.
 
-### 3. More Complex Examples
+## More Complex Examples
 
 In some cases, you may need to seed more complex data, such as creating relationships between entities. Here’s an
 example:
