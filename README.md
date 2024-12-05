@@ -16,15 +16,19 @@
 1. Create you seeder by implementing 'ISeeder'
 
 ``` csharp
-public class AdminSeeder : ISeeder<Admin>
+public class UserSeeder : Seeder<User>
 {
-    public IEnumerable<Admin> Generate()
+    public override async Task SeedAsync(CancellationToken ct)
     {
-        yield return new Admin 
-        { 
-            Name = "Admin" ,
-            Email = "Admin@Gmail.com"
-        };
+        if (DbSet.Any()) return;
+
+        DbSet.Add(new User
+        {
+            FirstName = "Sara",
+            LastName = "Sarara",
+        });
+
+        await Context.SaveChangesAsync(ct);
     }
 }
 ```
